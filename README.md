@@ -28,4 +28,4 @@ File: templates/taxonomy-book-genre.php
 
 ### TASK 6:
 
-File: templates/taxonomy-book-genre.php
+File: includes/ajax/load-posts-by-ajax.php
