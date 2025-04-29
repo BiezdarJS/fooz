@@ -1,22 +1,31 @@
-# plugin-mobile-bar
+# twentytwenty custom changes
 
 Task 1:
-includes/theme-setup.php - line 8
+
+File: includes/theme-setup.php
+
+Line: 8
 
 Task 2:
-includes/theme-setup.php - line 10
+
+File: includes/theme-setup.php
+
+Line: 10
 
 Task 3:
-includes/content-types/post-type-library.php
-(in a new line)
-includes/content-types/register-taxonomy-book-genre.php
+
+File 1: includes/content-types/post-type-library.php
+
+File 2: includes/content-types/register-taxonomy-book-genre.php
 
 Task 4:
-templates/single-book.php
+
+File: templates/single-book.php
 
 Task 5:
-templates/taxonomy-book-genre.php
 
+File: templates/taxonomy-book-genre.php
 
 Task 6:
-templates/taxonomy-book-genre.php
+
+File: templates/taxonomy-book-genre.php
