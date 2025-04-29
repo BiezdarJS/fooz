@@ -30,7 +30,7 @@ function register_library_cpt() {
       'show_in_rest' => true,
       'has_archive' => false,
       'rewrite' => array(
-          'slug' => 'books',
+          'slug' => 'library',
           'with_front' => false
       ),
       'menu_icon' => 'dashicons-book',
