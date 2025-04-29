@@ -31,8 +31,6 @@ $terms = get_the_terms(get_the_ID(), 'book-genre');
   </div>
 </header>
 
-<?php echo do_shortcode('[genre_books term_id="36"]'); ?>
-
 <img class="single-img" src="<?php echo get_the_post_thumbnail_url(); ?>" />
 
 <main id="primary" class="content-area container">
