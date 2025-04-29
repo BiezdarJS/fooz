@@ -20,11 +20,14 @@ File 2: includes/content-types/register-taxonomy-book-genre.php
 
 ### TASK 4:
 
-File: templates/single-book.php
+File 1:: templates/single-book.php
+
+File 2: templates/taxonomy-book-genre.php
 
 ### TASK 5:
+File 1: includes/shortcodes/latest-book.php
 
-File: templates/taxonomy-book-genre.php
+File 2: includes/shortcodes/list-books-by-genre.php
 
 ### TASK 6:
 File 1: assets/js/scripts.js
