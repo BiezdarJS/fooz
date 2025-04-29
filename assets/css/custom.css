@@ -1,0 +1,90 @@
+.my-search {
+  display: grid;
+  place-items: center;
+}
+
+a.get-json-data {
+  border: var(--button--border-width) solid transparent;
+    border-radius: var(--button--border-radius);
+    cursor: pointer;
+    font-weight: var(--button--font-weight);
+    font-family: var(--button--font-family);
+    font-size: var(--button--font-size);
+    line-height: var(--button--line-height);
+    padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+    text-decoration: none;
+}
+
+hr {
+  margin: 25px 0 50px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1550px) {
+  .container {
+    max-width: 1500px;
+  }
+}
+
+
+.page-header__heading {
+
+  text-align: center;
+  width: min(100%, 800px);
+  
+}
+
+.post-meta {
+  flex-direction: column;
+}
+
+.svg-icon {
+  display: inline-block;
+}
+
+.single-img {
+  display: block;
+  margin: 25px auto;
+}
+
+
+.post-meta {
+  text-align: center;
+}
+
+
+/* Taxonomy */
+
+.book-list-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+}
+
+.book-list-items .book-item {
+  width: calc(25% - 10px);
+}
+
+.book-cover img {
+  display: block;
+  margin: 0 auto;
+}
+
+.book-list-items .book-item > a {
+  text-decoration: none;
+}
+
+.book-list-items .book-title {
+  font-size: 16px;
+  margin: 10px auto;
+  text-align: center;
+}
+
