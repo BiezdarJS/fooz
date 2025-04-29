@@ -88,3 +88,42 @@ hr {
   text-align: center;
 }
 
+
+
+
+.pagination {
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  width: fit-content;
+}
+
+.page-numbers {
+  display: inline-block;
+  margin: 0 6px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #0073aa;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-numbers:hover {
+  background-color: #0073aa;
+  color: white;
+  cursor: pointer;
+}
+
+.page-numbers.current {
+  background-color: var(--wp--preset--color--accent);
+  color: white;
+  font-weight: bold;
+  cursor: default;
+}
+
+.page-numbers.next {
+  font-weight: 500;
+}
