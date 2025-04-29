@@ -27,5 +27,6 @@ File: templates/single-book.php
 File: templates/taxonomy-book-genre.php
 
 ### TASK 6:
+File 1: assets/js/scripts.js
 
-File: includes/ajax/load-posts-by-ajax.php
+File 2: File: includes/ajax/load-posts-by-ajax.php
