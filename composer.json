@@ -1,0 +1,20 @@
+{
+    "name": "tukoruzi/twentytwenty-child",
+    "type": "project",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "TwentyTwentyChild\\": [
+                "includes/content-types/",
+                "includes/shortcodes/",
+                "includes/ajax"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "BiezdarJS"
+        }
+    ],
+    "require": {}
+}

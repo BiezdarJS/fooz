@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <?php
-global $post;
 $terms = get_the_terms(get_the_ID(), 'book-genre');
 ?>
 
@@ -37,14 +36,14 @@ $terms = get_the_terms(get_the_ID(), 'book-genre');
   <div class="row">
     <?php while (have_posts()) : the_post(); ?>
 
-  <div class="container">
-    <div class="single-content">
-      <?php the_content(); ?>
+    <div class="container">
+      <div class="single-content">
+        <?php the_content(); ?>
+      </div>
     </div>
-  </div>
 
-  <?php endwhile; ?>
-  </div>
-</article>
+    <?php endwhile; ?>
+    </div>
+  </main>
 
 <?php get_footer(); ?>

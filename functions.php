@@ -1,9 +1,25 @@
 <?php
 
+// Theme setup
+require_once get_stylesheet_directory() . '/includes/theme-setup.php';
+// Autoload class
+require_once __DIR__ . '/vendor/autoload.php';
+
+// Initialize the classes
+$book_genre_taxonomy = new \TwentyTwentyChild\BookGenreTaxonomy();
+// Library Post Type class
+$library_post_type = new \TwentyTwentyChild\LibraryPostType();
+// Shortcodes Class
+$library_shorcodes = new \TwentyTwentyChild\LibraryShorcodes();
+// Ajax Handler Class
+$library_ajax_handler = new \TwentyTwentyChild\LibraryAjaxHandler();
+$library_ajax_handler->register();
+
+
 
 // Initialize child theme
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
-function my_theme_enqueue_styles() {
+add_action( 'wp_enqueue_scripts', 'ttc_enqueue_styles' );
+function ttc_enqueue_styles() {
 	$parenthandle = 'parent-style'; 
 	$theme        = wp_get_theme();
 	wp_enqueue_style( $parenthandle,
@@ -17,26 +33,3 @@ function my_theme_enqueue_styles() {
 		$theme->get( 'Version' )
 	);
 }
-
-
-
-function include_theme_files() {
-	$files = [
-			'/includes/content-types/post-type-library.php',
-			'/includes/content-types/register-taxonomy-book-genre.php',
-			'/includes/shortcodes/latest-book.php',
-			'/includes/shortcodes/list-books-by-genre.php',
-			'/includes/theme-setup.php',
-			'/includes/ajax/load-posts-by-ajax.php',
-	];
-
-	foreach ( $files as $file ) {
-			$path = get_stylesheet_directory() . $file;
-			if ( file_exists( $path ) ) {
-					require_once $path;
-			} else {
-					error_log( "File not found: " . $path );
-			}
-	}
-}
-add_action( 'after_setup_theme', 'include_theme_files' );

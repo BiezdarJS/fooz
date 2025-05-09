@@ -31,24 +31,9 @@
       <?php 
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
-        $args = array(
-          'post_type' => 'library',
-          'posts_per_page' => 5,
-          'paged' => $paged,
-          'tax_query' => array(
-            array(
-              'taxonomy' => 'book-genre',
-              'field'    => 'term_id',
-              'terms'    => $genre->term_id,
-            ),
-          ),
-        );
-
-        $query = new WP_Query($args);
-
-        if ($query->have_posts()) : ?>
+        if (have_posts()) : ?>
           <ul class="book-list-items list">
-            <?php while($query->have_posts()) : $query->the_post(); ?>
+            <?php while(have_posts()) : the_post(); ?>
               <li class="book-item">
                 <a href="<?php the_permalink(); ?>">
                   <?php if (has_post_thumbnail()) : ?>
@@ -62,11 +47,12 @@
 
           <div class="pagination">
             <?php 
+              global $wp_query;
               $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;  
               echo paginate_links(array(
                 'base' => get_pagenum_link() . '%_%',        
                 'format' => 'page/%#%',
-                'total' => $query->max_num_pages,
+                'total' => $wp_query->max_num_pages,
                 'prev_text'    => __('« previous'),
                 'next_text'    => __('next »'),
                 'page' => $paged
