@@ -20,38 +20,3 @@ jQuery(document).ready(function($) {
       });
   });
 });
-
-
-
-
-
-// Jak można za pomocą WordPress REST API zaktualizować pole custom field w niestandardowym typie posta?
-
-(function($) {
-  $('button.post-new-data').on('click', function(e) {
-    e.preventDefault();
-
-    $.ajax({
-      url: 'http://localhost/uzi-menu/wp-json/wp/v2/library/172',
-      type: 'POST',
-      contentType: 'application/json',
-      headers: {
-        'X-WP-Nonce': getJsonData.rest_nonce
-      },
-      data: JSON.stringify({
-        acf: {
-          price: 543
-        }
-      }),
-      success: function(response) {
-        console.log('Sukces!', response);
-      },
-      error: function(error) {
-        console.error('Błąd!', error);
-      }
-
-    });
-});
-  
-
-})(jQuery);

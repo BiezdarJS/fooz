@@ -5,14 +5,24 @@ require_once get_stylesheet_directory() . '/includes/theme-setup.php';
 // Autoload class
 require_once __DIR__ . '/vendor/autoload.php';
 
-// Initialize the classes
-$book_genre_taxonomy = new \TwentyTwentyChild\BookGenreTaxonomy();
-// Library Post Type class
-$library_post_type = new \TwentyTwentyChild\LibraryPostType();
-// Shortcodes Class
-$library_shorcodes = new \TwentyTwentyChild\LibraryShorcodes();
+// Initialize Taxonomy Class
+new \TwentyTwentyChild\BookGenreTaxonomy();
+
+// Initialize Library Post Type
+new \TwentyTwentyChild\LibraryPostType();
+
+// Initialize Shortcodes
+$bookQuery = new \TwentyTwentyChild\LatestBookQuery();
+$shortcodeRenderer = new \TwentyTwentyChild\BookShortcodeRenderer($bookQuery);
+$libraryShortcodes = new \TwentyTwentyChild\LibraryShortcodes($shortcodeRenderer);
+
 // Ajax Handler Class
-$library_ajax_handler = new \TwentyTwentyChild\LibraryAjaxHandler();
+// Initialize and Register Ajax Handler Class
+$library_ajax_handler = new \TwentyTwentyChild\LibraryAjaxHandler(
+	new \TwentyTwentyChild\NonceVerifier(),
+	new \TwentyTwentyChild\BookDataFetcher(),
+	new \TwentyTwentyChild\BookDataFormatter()
+);
 $library_ajax_handler->register();
 
 

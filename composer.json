@@ -8,7 +8,9 @@
                 "includes/content-types/",
                 "includes/shortcodes/",
                 "includes/ajax"
-            ]
+            ],
+            "TwentyTwentyChild\\Ajax\\Interfaces\\": "includes/ajax/interfaces/",
+            "TwentyTwentyChild\\Shortcode\\Interfaces\\": "includes/shortcodes/interfaces/"
         }
     },
     "authors": [
